@@ -10,6 +10,6 @@ namespace BassPriceComparator.Models
         public int id{ get; set; }
         public virtual Bass bass{ get; set; }
         public virtual Source source { get; set; }
-        public decimal price { get; set; }
+        public decimal? price { get; set; }
     }
 }

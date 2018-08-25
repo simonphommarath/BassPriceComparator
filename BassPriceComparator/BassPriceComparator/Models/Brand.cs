@@ -5,14 +5,9 @@ using System.Web;
 
 namespace BassPriceComparator.Models
 {
-    public class Bass
+    public class Brand
     {
         public int id { get; set; }
-        public string model { get; set; }
         public string name { get; set; }
-        public Brand brand { get; set; }
-        public string description { get; set; }
-
-        public virtual ICollection<Source> sourcePrice{ get; set; }
     }
 }

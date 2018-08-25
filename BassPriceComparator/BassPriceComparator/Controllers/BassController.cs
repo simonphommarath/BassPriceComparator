@@ -18,6 +18,7 @@ namespace BassPriceComparator.Controllers
         // GET: Bass
         public ActionResult Index()
         {
+            List<Bass> bassList = db.Basses.Include(b => b.brand).ToList();
             return View(db.Basses.ToList());
         }
 

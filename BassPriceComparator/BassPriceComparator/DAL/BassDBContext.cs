@@ -12,16 +12,22 @@ namespace BassPriceComparator.DAL
     {
         public BassDBContext() : base("BassDBContext")
         {
+
         }
 
         public DbSet<Bass> Basses { get; set; }
         public DbSet<Source> Sources { get; set; }
         public DbSet<BasePrice> BasePrices { get; set; }
-        
+        public DbSet<Brand> Brands { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+            modelBuilder.Entity<Bass>().HasRequired(b => b.brand);
+
+            modelBuilder.Entity<BasePrice>().HasRequired(b => b.bass);
+            modelBuilder.Entity<BasePrice>().HasRequired(b => b.source);
         }
     }
 }

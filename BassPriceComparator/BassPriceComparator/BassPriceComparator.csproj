@@ -161,6 +161,7 @@
     </Compile>
     <Compile Include="Models\BasePrice.cs" />
     <Compile Include="Models\Bass.cs" />
+    <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Source.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
